@@ -1,2 +1,2 @@
 # DSAlgo
-A repository that contains all of mine Data Structures and Algorithms solutions to various problems in Python3 stored in a structured manner.
+In this repository, I have stored solutions to various problems and concepts of Data Structures and Algorithms in Python3 in a structured manner.
