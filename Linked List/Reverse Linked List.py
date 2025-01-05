@@ -9,6 +9,7 @@ Given the head of a singly linked list, reverse the list, and return the reverse
 #         self.val = val
 #         self.next = next
 
+# Itrative Solution
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         prev, curr = None, head
@@ -18,6 +19,25 @@ class Solution:
             prev = curr
             curr = nxt
         return prev
-
+        
 # Time: O(n)
 # Space: O(1)
+
+'''
+# Recursive Solution
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:        
+        # Base Case
+        if not head:
+            return None
+        # Recursive Case
+        newHead = head
+        if head.next:
+            newHead = self.reverseList(head.next)
+            head.next.next = head
+        head.next = None
+        return newHead
+        
+# Time: O(n)
+# Space: O(n)
+'''
