@@ -19,7 +19,7 @@ class Solution:
                 arr[i] = arr[i-1] + 1
         for i in range(n-2, -1, -1):
             if ratings[i + 1] < ratings[i]:
-                arr[i] = arr[i+1] + 1
+                arr[i] = max(arr[i], arr[i+1] + 1)
         return sum(arr)
 
 # Time: O(n^2)
