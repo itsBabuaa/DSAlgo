@@ -15,4 +15,4 @@ class Solution:
             else:
                 xor2 ^= num
 
-        return [xor1, xor2]
+        return [xor1, xor2] if xor1 < xor2 else [xor2, xor1]    # sorted order
